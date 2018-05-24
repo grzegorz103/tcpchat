@@ -1,4 +1,4 @@
-﻿import java.io.*;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -64,7 +64,7 @@ class ClientThread implements Runnable {
         this.userList.stream()
                 .filter(x -> x.nick.equals(message[1]))
                 .filter(x -> !x.socket.isClosed())
-                .forEachOrdered(x -> x.send("Message from: " + message[0] + ": " + message[1] + "\n"));
+                .forEachOrdered(x -> x.send("Message from: " + message[0] + ": " + message[2] + "\n"));
     }
 
     private void sendFile(String... message) {
