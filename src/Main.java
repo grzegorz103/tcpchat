@@ -1,5 +1,4 @@
-﻿import java.io.*;
-import java.net.Inet4Address;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -17,7 +16,7 @@ public class Main {
         do {
             System.out.println("Enter your nick");
             main.nick = new Scanner(System.in).nextLine();
-            System.out.println(main.nick.length() <= 0 ? "Nick cannot be empty : "Welcome " + main.nick);
+            System.out.println(main.nick.length() <= 0 ? "Nick cannot be empty : " : "Welcome " + main.nick);
         } while (main.nick.length() <= 0);
 
         main.startChat();
